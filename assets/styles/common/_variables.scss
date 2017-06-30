@@ -2,7 +2,21 @@
 $black: #000;
 $white: #fff;
 $color__red: #d90e0a;
+$color__red--light: #e34e33;
 $color__blue: #67d9da;
 $color__grey--dark: #1d1d1d;
-$color__grey--medium: #9f9f9f;
 $color__grey--light: #9f9f9f;
+$border__color: #282828;
+// Fonts
+$font__tradegothic: 'TradeGothicLT-BoldCondTwenty', sans-serif;
+$font__arial: 'arialregular', sans-serif;
+$font__arialbold: 'arialbold', sans-serif;
+
+$custom-neat-grid: (
+  columns: 12,
+  media: 768px,
+);
+
+$custom-neat-grid-lg: (
+  media: 992px
+);

@@ -1,6 +1,29 @@
 @mixin background__image {
-	background-size: cover;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    @include position(relative);
+}
+
+@mixin body__header {
+    header {
+        @include padding( null null 20px null);
+        @include margin( null null 40px null);
+        border-bottom: 1px solid $border__color;
+        @include grid-media($custom-neat-grid) {
+            @include margin(null null null 25px);
+        }
+        h3 {
+            font-family: $font__arialbold;
+            color: $color__grey--light;
+            font-size: 22px;
+            @include margin(null 10px null null);
+            @include inline-block;
+        }
+        a {
+            font-family: $font__arialbold;
+            font-size: 13px;
+            color: $color__red--light;
+        }
+    }
 }

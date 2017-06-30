@@ -1,0 +1,38 @@
+.hero {
+    background-image: url("../../assets/images/hero@2x.jpg");
+    @include background__image;
+    @include size(null 674px);
+    .container {
+        .content {
+            @include size (360px null);
+            @include padding(null 15px);
+            @include position(absolute,
+            50% null null null);
+            @include transform(translateY(-50%));
+            @include grid-media($custom-neat-grid) {
+                @include padding(null null null 50px);
+            }
+            h2 {
+                font-family: $font__tradegothic;
+                font-size: 60px;
+                color: $color__red;
+                text-transform: uppercase;
+            }
+            p {
+                font-family: $font__arial;
+                font-size: 16px;
+                color: $color__grey--light;
+                @include padding(15px null);
+                a {
+                    color: $color__red;
+                }
+            }
+        }
+    }
+    @include grid-media($custom-neat-grid-lg) {
+        .container {
+            @include size (945px null);
+            @include margin (0 auto);
+        }
+    }
+}
