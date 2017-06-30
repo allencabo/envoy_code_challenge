@@ -1,0 +1,99 @@
+main {
+    background-color: $color__grey--dark;
+    @include padding(20px 20px 900px 20px);
+    @include margin( null auto);
+    @include grid-container;
+    .wrapper {
+        .intro {
+            @include padding(40px null 40px null);
+            @include margin(null null 40px null);
+            border-bottom: 1px solid $border__color;
+            @include grid-media($custom-neat-grid) {
+                @include margin(null null null 25px);
+            }
+            h2 {
+                font-family: $font__arialbold;
+                font-size: 36px;
+                color: $white;
+                line-height: 30px;
+                span {
+                    color: $color__red--light;
+                }
+            }
+        }
+        section.feat__work {
+            @include body__header;
+            .posts__container {
+                .posts {
+                    @include margin(null null 20px null);
+                    @include grid-media($custom-neat-grid) {
+                        @include grid-column(4);
+                    }
+                    img {
+                        width: 100%;
+                    }
+                    .content {
+                        h3 {
+                            font-family: $font__arialbold;
+                            font-size: 18px;
+                            color: $white;
+                            @include margin(20px null null null);
+                            span {
+                                color: $color__blue;
+                            }
+                        }
+                        p {
+                            font-family: $font__arialbold;
+                            font-size: 13px;
+                            color: $color__grey--light;
+                            @include margin(0 null 0 null);
+                        }
+                        a {
+                            font-family: $font__arialbold;
+                            font-size: 13px;
+                            color: $color__red--light;
+                        }
+                    }
+                }
+            }
+        }
+        section.news {
+            @include body__header;
+            .news__container {
+                .news {
+                    @include margin(null null 20px null);
+                    @include grid-media($custom-neat-grid) {
+                        @include grid-column(4);
+                    }
+                    h2 {
+                        font-family: $font__arialbold;
+                        font-size: 36px;
+                        color: $white;
+                        line-height: 30px;
+                    }
+                    p {
+                        font-family: $font__arialbold;
+                        color: $color__grey--light;
+                        @include margin(5px 0);
+                    }
+                    a {
+                        font-family: $font__arialbold;
+                        font-size: 13px;
+                        color: $color__red--light;
+                    }
+                    &:last-child {
+                        h2 {
+                            color: $color__blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include grid-media($custom-neat-grid-lg) {
+        .wrapper {
+            @include size (945px null);
+            @include margin( 0 auto);
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'TradeGothicLT-BoldCondTwenty';
+    src: url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.eot") format('eot'),
+    	url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.svg") format("svg"), 
+        url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.ttf") format("truetype"),
+    	url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.woff2") format("woff2"), 
+    	url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.woff") format("woff");
+	    font-weight: normal;
+	    font-style: normal;
+}
+@font-face {
+    font-family: 'arialbold';
+    src: url('../../assets/fonts/Arial/arial_bold-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/Arial/arial_bold-webfont.woff') format('woff');
+         font-weight: normal;
+         font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'arialregular';
+    src: url('../../assets/fonts/Arial/arial-webfont.woff2') format('woff2'),
+         url('../../assets/fonts/Arial/arial-webfont.woff') format('woff');
+         font-weight: normal;
+         font-style: normal;
+}

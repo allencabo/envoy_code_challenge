@@ -1,37 +1,57 @@
 header.header {
-    @include padding(15px 0 15px 0);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 45px;
+    @include padding(15px null 15px null);
+    @include position(fixed, 0 null null null);
+    @include size( 100% 45px);
     background: rgba($black, 0.8);
     z-index: 1;
     h1 {
-        position: relative;
-        left: 20px;
-        width: 120px;
-        z-index: 9;
+        @include position(relative, null null null 20px);
+        @include size(120px null) z-index: 9;
+    }
+    nav.primary {
+        display: none;
+    }
+    .social-container.desktop {
+        @include position(relative, 20px 20px null null);
+        display: none;
+        .social {
+            @include size( 150px null) width: 150px;
+            @include margin( 0 auto);
+            @include padding(0px 0px 0px 25px);
+            background-color: #464646;
+            p {
+                font-family: $font__arialbold;
+                font-size: 13px;
+                color: $color__blue;
+                @include inline-block;
+                @include padding(0);
+                @include margin(11px 0);
+                i {
+                    @include margin(null 10px null null);
+                }
+            }
+            .fa-plus {
+                color: $white;
+                background-color: #e34e33;
+                @include padding(10px 10px 14px 11px);
+                @include margin(null null null 11px);
+            }
+        }
     }
     .menu__toggle {
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        height: 15px;
-        width: 35px;
+        @include position(absolute, 50% 20px null null);
+        @include size(35px 15px);
+        @include transition(opacity .25s ease);
+        @include transform(translateY(-50%));
         border-radius: 50%;
         cursor: pointer;
         z-index: 100;
-        transition: opacity .25s ease;
-        transform: translateY(-50%);
         span {
+            @include size(100% 2px);
+            @include position(absolute, 0 null null 0);
+            @include transition(all .35s ease);
             background: $white;
             border: none;
-            height: 2px;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: all .35s ease;
             cursor: pointer;
             &.bottom {
                 top: 12px;
@@ -40,27 +60,21 @@ header.header {
         &.active {
             span {
                 &.top {
-                    transform: translateY(6px) translateX(0) rotate(45deg);
+                    @include transform(translateY(6px) translateX(0) rotate(45deg));
                 }
                 &.bottom {
-                    transform: translateY(-6px) translateX(0) rotate(-45deg);
+                    @include transform(translateY(-6px) translateX(0) rotate(-45deg));
                 }
             }
         }
     }
     .menu__overlay {
-        position: fixed;
+        @include position(fixed, 0 0 null 0);
+        @include size(100%);
+        @include transition( opacity .5s, visibility .5s, height .5s);
         background-color: $black;
-        top: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         opacity: 0;
         visibility: hidden;
-        -webkit-transition: opacity .5s, visibility .5s, height .5s;
-        -o-transition: opacity .5s, visibility .5s, height .5s;
-        transition: opacity .5s, visibility .5s, height .5s;
         z-index: 9;
         overflow: hidden;
         &.open {
@@ -68,14 +82,25 @@ header.header {
             visibility: visible;
         }
         nav {
-            margin-top: 100px;
+            @include margin(100px null null null);
             ul {
                 text-align: center;
-                margin-top: 50px;
+                @include margin(50px null null null);
                 li {
-                    margin: 10px 0;
-                    padding-bottom: 5px;
+                    @include margin(10px 0);
+                    @include padding(null null 5px null);
+                    &:nth-child(4) {
+                        a {
+                            color: $color__grey--light;
+                        }
+                    }
+                    &:nth-child(5) {
+                        a {
+                            color: $color__red--light;
+                        }
+                    }
                     a {
+                        font-family: $font__arialbold;
                         font-size: 16px;
                         color: $white;
                         text-align: center;
@@ -85,31 +110,77 @@ header.header {
         }
         .social-container {
             .social {
-                width: 150px;
-                margin: 0 auto;
-                background-color: #464646;
+                @include size( 150px null) width: 150px;
+                @include margin( 0 auto);
                 @include padding(0px 0px 0px 25px);
+                background-color: #464646;
                 p {
-                    display: inline-block;
+                    font-family: $font__arialbold;
+                    font-size: 13px;
                     color: $color__blue;
+                    @include inline-block;
                     @include padding(0);
-                    @include margin(10px 0);
+                    @include margin(11px 0);
                     i {
-                        margin-right: 10px;
+                        @include margin(null 10px null null);
                     }
                 }
                 .fa-plus {
                     color: $white;
                     background-color: #e34e33;
-                    @include padding(10px 10px 12px 11px);
+                    @include padding(10px 10px 14px 11px);
+                    @include margin(null null null 11px);
                 }
             }
         }
     }
-}
-
-.hero {
-    height: 337px;
-    background-image: url("../../assets/images/hero@2x.jpg");
-    @include background__image;
+    @include grid-media($custom-neat-grid) {
+        .header__container {
+            @include margin(null null null 25px);
+        }
+        h1 {
+            @include inline-block;
+        }
+        .menu__toggle {
+            display: none;
+        }
+        nav.primary {
+            @include inline-block;
+            @include margin (null null null 20px);
+            @include position(relative, 5px null null null);
+            ul {
+                li {
+                    float: left;
+                    @include margin(null 10px);
+                    @include padding(null null 5px null);
+                    &:nth-child(4) {
+                        a {
+                            color: $color__grey--light;
+                        }
+                    }
+                    &:nth-child(5) {
+                        a {
+                            color: $color__red--light;
+                        }
+                    }
+                    a {
+                        font-family: $font__arialbold;
+                        font-size: 16px;
+                        color: $white;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    @include grid-media($custom-neat-grid-lg) {
+        .header__container {
+            @include size (945px null);
+            @include margin (0 auto);
+        }
+        .social-container.desktop {
+            @include inline-block;
+            float: right;
+        }
+    }
 }
