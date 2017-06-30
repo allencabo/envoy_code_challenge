@@ -1,0 +1,43 @@
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0;
+    &.overflow {
+        overflow: hidden;
+    }
+}
+
+a {
+    &:hover,
+    &:active,
+    &:visited,
+    &:link,
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+ul {
+    padding-left: 0;
+    li {
+        list-style-type: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-top: 0;
+    margin-bottom: 0px;
+}

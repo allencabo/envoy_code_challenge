@@ -1,0 +1,30 @@
+{
+  "name": "envoy_code_challenge-master",
+  "version": "1.0.0",
+  "description": "Code Challenge for ENVOY",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allencabo/envoy_code_challenge.git"
+  },
+  "author": "Allen Encabo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allencabo/envoy_code_challenge/issues"
+  },
+  "homepage": "https://github.com/allencabo/envoy_code_challenge#readme",
+  "devDependencies": {
+    "bourbon": "^4.3.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "jquery": "^3.2.1"
+  },
+  "dependencies": {
+    "neat": "^1.2.2",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^2.0.0-beta.0"
+  }
+}
