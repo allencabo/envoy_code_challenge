@@ -1,35 +1,3 @@
-* {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0; }
-  html.overflow,
-  body.overflow {
-    overflow: hidden; }
-
-a:hover, a:active, a:visited, a:link, a:hover {
-  text-decoration: none !important; }
-
-ul {
-  padding-left: 0; }
-  ul li {
-    list-style-type: none; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 0px; }
-
 @font-face {
   font-family: 'TradeGothicLT-BoldCondTwenty';
   src: url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.eot") format("eot"), url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.svg") format("svg"), url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.ttf") format("truetype"), url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.woff2") format("woff2"), url("../../assets/fonts/TradeGothic-CondEighteen/tradegothic-condeighteen-webfont.woff") format("woff");
@@ -158,31 +126,31 @@ header.header {
         header.header .menu__overlay nav ul li {
           margin: 10px 0;
           padding-bottom: 5px; }
-          header.header .menu__overlay nav ul li:nth-child(4) a {
-            color: #9f9f9f; }
-          header.header .menu__overlay nav ul li:nth-child(5) a {
-            color: #e34e33; }
           header.header .menu__overlay nav ul li a {
             font-family: "arialbold", sans-serif;
             font-size: 16px;
             color: #fff;
             text-align: center; }
-    header.header .menu__overlay .social-container .social {
+          header.header .menu__overlay nav ul li:nth-child(4) a {
+            color: #9f9f9f; }
+          header.header .menu__overlay nav ul li:nth-child(5) a {
+            color: #e34e33; }
+    header.header .menu__overlay .social {
       width: 150px;
       width: 150px;
       margin: 0 auto;
       padding: 0 0 0 25px;
       background-color: #464646; }
-      header.header .menu__overlay .social-container .social p {
+      header.header .menu__overlay .social p {
         font-family: "arialbold", sans-serif;
         font-size: 13px;
         color: #67d9da;
         display: inline-block;
         padding: 0;
         margin: 11px 0; }
-        header.header .menu__overlay .social-container .social p i {
+        header.header .menu__overlay .social p i {
           margin-right: 10px; }
-      header.header .menu__overlay .social-container .social .fa-plus {
+      header.header .menu__overlay .social .fa-plus {
         color: #fff;
         background-color: #e34e33;
         padding: 10px 10px 14px 11px;
@@ -199,20 +167,20 @@ header.header {
       margin-left: 20px;
       position: relative;
       top: 5px; }
-      header.header nav.primary ul li {
+      header.header nav.primary li {
         float: left;
         margin-right: 10px;
         margin-left: 10px;
         padding-bottom: 5px; }
-        header.header nav.primary ul li:nth-child(4) a {
-          color: #9f9f9f; }
-        header.header nav.primary ul li:nth-child(5) a {
-          color: #e34e33; }
-        header.header nav.primary ul li a {
+        header.header nav.primary li a {
           font-family: "arialbold", sans-serif;
           font-size: 16px;
           color: #fff;
-          text-align: center; } }
+          text-align: center; }
+        header.header nav.primary li:nth-child(4) a {
+          color: #9f9f9f; }
+        header.header nav.primary li:nth-child(5) a {
+          color: #e34e33; } }
   @media only screen and (min-width: 992px) {
     header.header .header__container {
       width: 945px;
@@ -226,35 +194,36 @@ header.header {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  position: relative;
-  height: 674px; }
-  .hero .container .content {
-    width: 360px;
-    padding-right: 15px;
-    padding-left: 15px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%); }
-    @media only screen and (min-width: 768px) {
-      .hero .container .content {
-        padding-left: 50px; } }
-    .hero .container .content h2 {
-      font-family: "TradeGothicLT-BoldCondTwenty", sans-serif;
-      font-size: 60px;
-      color: #d90e0a;
-      text-transform: uppercase; }
-    .hero .container .content p {
-      font-family: "arialregular", sans-serif;
-      font-size: 16px;
-      color: #9f9f9f;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-      .hero .container .content p a {
-        color: #d90e0a; }
+  position: relative; }
+  .hero .container {
+    height: 674px; }
+    .hero .container .content {
+      width: 360px;
+      padding-right: 15px;
+      padding-left: 15px;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .hero .container .content h2 {
+        font-family: "TradeGothicLT-BoldCondTwenty", sans-serif;
+        font-size: 60px;
+        color: #d90e0a;
+        text-transform: uppercase; }
+      .hero .container .content p {
+        font-family: "arialregular", sans-serif;
+        font-size: 16px;
+        color: #9f9f9f;
+        padding-top: 15px;
+        padding-bottom: 15px; }
+        .hero .container .content p a {
+          color: #d90e0a; }
+  @media only screen and (min-width: 768px) {
+    .hero .content {
+      padding-left: 50px; } }
   @media only screen and (min-width: 992px) {
     .hero .container {
       width: 945px;
@@ -269,11 +238,15 @@ main {
     clear: both;
     content: "";
     display: block; }
+  main .wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
   main .wrapper .intro {
     padding-top: 40px;
     padding-bottom: 40px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #282828; }
+    margin-bottom: 50px;
+    border-bottom: 5px solid #282828; }
     @media only screen and (min-width: 768px) {
       main .wrapper .intro {
         margin-left: 25px; } }
@@ -284,52 +257,58 @@ main {
       line-height: 30px; }
       main .wrapper .intro h2 span {
         color: #e34e33; }
-  main .wrapper section.feat__work header {
-    padding-bottom: 20px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #282828; }
-    @media only screen and (min-width: 768px) {
-      main .wrapper section.feat__work header {
-        margin-left: 25px; } }
-    main .wrapper section.feat__work header h3 {
-      font-family: "arialbold", sans-serif;
-      color: #9f9f9f;
-      font-size: 22px;
-      margin-right: 10px;
-      display: inline-block; }
-    main .wrapper section.feat__work header a {
-      font-family: "arialbold", sans-serif;
-      font-size: 13px;
-      color: #e34e33; }
-  main .wrapper section.feat__work .posts__container .posts {
-    margin-bottom: 20px; }
-    @media only screen and (min-width: 768px) {
-      main .wrapper section.feat__work .posts__container .posts {
-        width: calc(33.33333% - 26.66667px);
-        float: left;
-        margin-left: 20px; } }
-    main .wrapper section.feat__work .posts__container .posts img {
-      width: 100%; }
-    main .wrapper section.feat__work .posts__container .posts .content h3 {
-      font-family: "arialbold", sans-serif;
-      font-size: 18px;
-      color: #fff;
-      margin-top: 20px; }
-      main .wrapper section.feat__work .posts__container .posts .content h3 span {
-        color: #67d9da; }
-    main .wrapper section.feat__work .posts__container .posts .content p {
-      font-family: "arialbold", sans-serif;
-      font-size: 13px;
-      color: #9f9f9f;
-      margin-top: 0;
-      margin-bottom: 0; }
-    main .wrapper section.feat__work .posts__container .posts .content a {
-      font-family: "arialbold", sans-serif;
-      font-size: 13px;
-      color: #e34e33; }
+  main .wrapper section.feat__work {
+    margin-bottom: 30px; }
+    main .wrapper section.feat__work::after {
+      clear: both;
+      content: "";
+      display: table; }
+    main .wrapper section.feat__work header {
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #282828; }
+      @media only screen and (min-width: 768px) {
+        main .wrapper section.feat__work header {
+          margin-left: 25px; } }
+      main .wrapper section.feat__work header h3 {
+        font-family: "arialbold", sans-serif;
+        color: #9f9f9f;
+        font-size: 22px;
+        margin-right: 10px;
+        display: inline-block; }
+      main .wrapper section.feat__work header a {
+        font-family: "arialbold", sans-serif;
+        font-size: 13px;
+        color: #e34e33; }
+    main .wrapper section.feat__work .posts__container .posts {
+      margin-bottom: 20px; }
+      @media only screen and (min-width: 768px) {
+        main .wrapper section.feat__work .posts__container .posts {
+          width: calc(33.33333% - 26.66667px);
+          float: left;
+          margin-left: 20px; } }
+      main .wrapper section.feat__work .posts__container .posts img {
+        width: 100%; }
+      main .wrapper section.feat__work .posts__container .posts .content h3 {
+        font-family: "arialbold", sans-serif;
+        font-size: 18px;
+        color: #fff;
+        margin-top: 20px; }
+        main .wrapper section.feat__work .posts__container .posts .content h3 span {
+          color: #67d9da; }
+      main .wrapper section.feat__work .posts__container .posts .content p {
+        font-family: "arialbold", sans-serif;
+        font-size: 13px;
+        color: #9f9f9f;
+        margin-top: 0;
+        margin-bottom: 0; }
+      main .wrapper section.feat__work .posts__container .posts .content a {
+        font-family: "arialbold", sans-serif;
+        font-size: 13px;
+        color: #e34e33; }
   main .wrapper section.news header {
     padding-bottom: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     border-bottom: 1px solid #282828; }
     @media only screen and (min-width: 768px) {
       main .wrapper section.news header {
@@ -344,29 +323,58 @@ main {
       font-family: "arialbold", sans-serif;
       font-size: 13px;
       color: #e34e33; }
-  main .wrapper section.news .news__container .news {
+  main .wrapper section.news .news {
     margin-bottom: 20px; }
     @media only screen and (min-width: 768px) {
-      main .wrapper section.news .news__container .news {
+      main .wrapper section.news .news {
         width: calc(33.33333% - 26.66667px);
         float: left;
         margin-left: 20px; } }
-    main .wrapper section.news .news__container .news h2 {
+    main .wrapper section.news .news h2 {
       font-family: "arialbold", sans-serif;
       font-size: 36px;
       color: #fff;
       line-height: 30px; }
-    main .wrapper section.news .news__container .news p {
+    main .wrapper section.news .news p {
       font-family: "arialbold", sans-serif;
       color: #9f9f9f;
       margin: 5px 0; }
-    main .wrapper section.news .news__container .news a {
+    main .wrapper section.news .news a {
       font-family: "arialbold", sans-serif;
       font-size: 13px;
       color: #e34e33; }
-    main .wrapper section.news .news__container .news:last-child h2 {
+    main .wrapper section.news .news:last-child h2 {
       color: #67d9da; }
   @media only screen and (min-width: 992px) {
     main .wrapper {
       width: 945px;
       margin: 0 auto; } }
+
+* {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+a:hover, a:active, a:visited, a:link, a:hover {
+  text-decoration: none !important; }
+
+ul {
+  padding-left: 0; }
+  ul li {
+    list-style-type: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0; }

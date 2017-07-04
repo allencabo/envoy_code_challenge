@@ -4,10 +4,11 @@ main {
     @include margin( null auto);
     @include grid-container;
     .wrapper {
+        @include clearfix;
         .intro {
             @include padding(40px null 40px null);
-            @include margin(null null 40px null);
-            border-bottom: 1px solid $border__color;
+            @include margin(null null 50px null);
+            border-bottom: 5px solid $border__color;
             @include grid-media($custom-neat-grid) {
                 @include margin(null null null 25px);
             }
@@ -22,6 +23,8 @@ main {
             }
         }
         section.feat__work {
+            @include clearfix;
+            @include margin(null null 30px null);
             @include body__header;
             .posts__container {
                 .posts {
@@ -59,7 +62,6 @@ main {
         }
         section.news {
             @include body__header;
-            .news__container {
                 .news {
                     @include margin(null null 20px null);
                     @include grid-media($custom-neat-grid) {
@@ -87,7 +89,6 @@ main {
                         }
                     }
                 }
-            }
         }
     }
     @include grid-media($custom-neat-grid-lg) {

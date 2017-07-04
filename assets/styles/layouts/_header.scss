@@ -6,7 +6,8 @@ header.header {
     z-index: 1;
     h1 {
         @include position(relative, null null null 20px);
-        @include size(120px null) z-index: 9;
+        @include size(120px null);
+        z-index: 9;
     }
     nav.primary {
         display: none;
@@ -89,6 +90,12 @@ header.header {
                 li {
                     @include margin(10px 0);
                     @include padding(null null 5px null);
+                    a {
+                        font-family: $font__arialbold;
+                        font-size: 16px;
+                        color: $white;
+                        text-align: center;
+                    }
                     &:nth-child(4) {
                         a {
                             color: $color__grey--light;
@@ -99,38 +106,30 @@ header.header {
                             color: $color__red--light;
                         }
                     }
-                    a {
-                        font-family: $font__arialbold;
-                        font-size: 16px;
-                        color: $white;
-                        text-align: center;
-                    }
                 }
             }
         }
-        .social-container {
-            .social {
-                @include size( 150px null) width: 150px;
-                @include margin( 0 auto);
-                @include padding(0px 0px 0px 25px);
-                background-color: #464646;
-                p {
-                    font-family: $font__arialbold;
-                    font-size: 13px;
-                    color: $color__blue;
-                    @include inline-block;
-                    @include padding(0);
-                    @include margin(11px 0);
-                    i {
-                        @include margin(null 10px null null);
-                    }
+        .social {
+            @include size( 150px null) width: 150px;
+            @include margin( 0 auto);
+            @include padding(0px 0px 0px 25px);
+            background-color: #464646;
+            p {
+                font-family: $font__arialbold;
+                font-size: 13px;
+                color: $color__blue;
+                @include inline-block;
+                @include padding(0);
+                @include margin(11px 0);
+                i {
+                    @include margin(null 10px null null);
                 }
-                .fa-plus {
-                    color: $white;
-                    background-color: #e34e33;
-                    @include padding(10px 10px 14px 11px);
-                    @include margin(null null null 11px);
-                }
+            }
+            .fa-plus {
+                color: $white;
+                background-color: #e34e33;
+                @include padding(10px 10px 14px 11px);
+                @include margin(null null null 11px);
             }
         }
     }
@@ -148,26 +147,24 @@ header.header {
             @include inline-block;
             @include margin (null null null 20px);
             @include position(relative, 5px null null null);
-            ul {
-                li {
-                    float: left;
-                    @include margin(null 10px);
-                    @include padding(null null 5px null);
-                    &:nth-child(4) {
-                        a {
-                            color: $color__grey--light;
-                        }
-                    }
-                    &:nth-child(5) {
-                        a {
-                            color: $color__red--light;
-                        }
-                    }
+            li {
+                float: left;
+                @include margin(null 10px);
+                @include padding(null null 5px null);
+                a {
+                    font-family: $font__arialbold;
+                    font-size: 16px;
+                    color: $white;
+                    text-align: center;
+                }
+                &:nth-child(4) {
                     a {
-                        font-family: $font__arialbold;
-                        font-size: 16px;
-                        color: $white;
-                        text-align: center;
+                        color: $color__grey--light;
+                    }
+                }
+                &:nth-child(5) {
+                    a {
+                        color: $color__red--light;
                     }
                 }
             }

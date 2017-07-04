@@ -1,3 +1,11 @@
+@mixin clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
 @mixin background__image {
     background-size: cover;
     background-position: 50% 50%;
@@ -8,7 +16,7 @@
 @mixin body__header {
     header {
         @include padding( null null 20px null);
-        @include margin( null null 40px null);
+        @include margin( null null 30px null);
         border-bottom: 1px solid $border__color;
         @include grid-media($custom-neat-grid) {
             @include margin(null null null 25px);
