@@ -1,38 +1,114 @@
-.hero {
-    background-image: url("../../assets/images/hero@2x.jpg");
-    @include background__image;
-    .container {
-        @include size(null 674px);
-        .content {
-            @include size (360px null);
-            @include padding(null 15px);
-            @include position(absolute,
-            50% null null null);
-            @include transform(translateY(-50%));
-            h2 {
-                font-family: $font__tradegothic;
-                font-size: 60px;
-                color: $color__red;
-                text-transform: uppercase;
+.hero__slider {
+    @include margin(75px 0 0 0);
+    margin-bottom: 0!important;
+    img {
+        @include size(100% null);
+    }
+    // Slick Components Styles
+    .slick-arrow {
+        top: 86%;
+        transform: none;
+        z-index: 9;
+        display: none !important;
+        &:before {
+            font-family: FontAwesome;
+            font-size: 40px;
+            opacity: 1;
+        }
+        &.slick-prev {
+            left: auto;
+            right: 30%;
+            &:before {
+                content: '\f104';
+                color: $color__red--light;
             }
-            p {
-                font-family: $font__arial;
-                font-size: 16px;
+        }
+        &.slick-next {
+            right: 28%;
+            &:before {
+                content: '\f105';
+                color: $white;
+            }
+        }
+    }
+    ul.slick-dots {
+        bottom: 0;
+        li {
+            @include margin(0);
+            button:before {
+                font-size: 14px;
+                color: $white;
+                opacity: 1;
+                transition: .3s;
+            }
+            &:hover:before {
                 color: $color__grey--light;
-                @include padding(15px null);
-                a {
-                    color: $color__red;
-                }
+                transition: .3s;
+            }
+            &.slick-active button:before {
+                color: $color__red--light;
+            }
+        }
+    }
+    //Slider Styles
+    .slider:nth-child(4) .content {
+        h2,
+        a {
+            color: $color__orange;
+        }
+    }
+    .slider:nth-child(5) .content {
+        h2,
+        a {
+            color: $color__blue--dark;
+        }
+    }
+    .content {
+        @include size (360px null);
+        @include padding(null 15px);
+        @include position(absolute, 50% null null null);
+        @include transform(translateY(-50%));
+        h2 {
+            font-family: $font__tradegothic;
+            font-size: 25px;
+            color: $color__red;
+            text-transform: uppercase;
+            @include position(relative, 25px null null null);
+        }
+        p {
+            font-family: $font__arial;
+            font-size: 16px;
+            color: $color__grey--light;
+            @include padding(15px null);
+            a {
+                color: $color__red;
             }
         }
     }
     @include grid-media($custom-neat-grid) {
+        @include margin(0);
+        .slider:nth-child(3) {
+            .content {
+                transform: translate(100%, -50%);
+            }
+        }
         .content {
             @include padding(null null null 50px);
+            @include size (450px null);
+            h2 {
+                font-size: 60px;
+                line-height: 55px;
+            }
+        }
+        ul.slick-dots {
+            bottom: 50px;
+        }
+        .slick-arrow {
+            display: inline-block !important;
         }
     }
     @include grid-media($custom-neat-grid-lg) {
-        .container {
+        .content__container {
             @include size (945px null);
             @include margin (0 auto);
         }
